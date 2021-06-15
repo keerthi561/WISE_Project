@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+  	<property name = "hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name = "hibernate.connection.driver_class">com.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:3306/db</property>
+    
+  
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <property name="show_sql">true</property>
+    <property name="hbm2ddl.auto">create</property>
+    <mapping class="com.rest.dto.Student"/>
+	<mapping class="com.rest.dto.Attendance"/>
+    
+    <mapping class="com.rest.dto.BatchDetails"/>
+    <mapping class="com.rest.dto.Performance"/>
+    <mapping class="com.rest.dto.Module"/>
+    <mapping class="com.rest.dto.Trainer"/>
+    <mapping class="com.rest.dto.Management"/> 
+    <mapping class="com.rest.dto.CollegeManagement"/> 
+
+  </session-factory>
+</hibernate-configuration>

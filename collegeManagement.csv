@@ -1,0 +1,3 @@
+id,name,designation,userId,password,mobile,homeAddress,pincode,city,district,state,country,image,gender,fb,twitter,linkedIn,college
+123456,Keerthi Palireddy,Principal,123456@collegeteam.com,password,9963605948,7-662-4A-I  shivaji nagar,523316,markapur,prkasam,Andhra Pradesh,NA,NA,female,NA,NA,https://www.linkedin.com/in/pasokan/,BVRITH
+123457,reshma,WISE Incharge,123457@collegeteam.com,password,9440993804,6-7-88,879056,warangal,warangal,telangana,NA,NA,female,NA,NA,NA,SVECW
