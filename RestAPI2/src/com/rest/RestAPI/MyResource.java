@@ -14,9 +14,11 @@ import javax.ws.rs.core.MediaType;
 import com.rest.dto.CollegeManagement;
 import com.rest.dto.Management;
 import com.rest.dto.Student;
+import com.rest.dto.Trainer;
 import com.ts.dao.CollegeManagementDAO;
 import com.ts.dao.ManagementDAO;
 import com.ts.dao.StudentDAO;
+import com.ts.dao.TrainerDAO;
 
 
 @Path("myresource")
@@ -174,6 +176,16 @@ public class MyResource {
     	studentDAO.register(student); //send to database code 
     	//System.out.println(student.getStudentId()+" " + student.getStudentName() + " " + student.getStudentUserId());
     }
+    @Path("registerTrainer")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void registerTrainer(List<Trainer> trainer) {
+    	System.out.println("Inside REST..." + trainer);
+    	TrainerDAO trainerDAO = new TrainerDAO();
+    	trainerDAO.register(trainer); //send to database code 
+    	//System.out.println(student.getStudentId()+" " + student.getStudentName() + " " + student.getStudentUserId());
+    }
+    
     @Path("registerManagement")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -204,6 +216,17 @@ public class MyResource {
     	student = studentDAO.getStudent(studId);
 		return student;
     }
+    @Path("getTrainerById/{trainerId}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Trainer getTrainerById(@PathParam("trainerId") String trainerId) {
+    	Trainer trainer = new Trainer();
+    	TrainerDAO trainerDAO = new TrainerDAO();
+    	trainer = trainerDAO.getTrainer(trainerId);
+		return trainer;
+    }
+    
+    
     @Path("getManagement")
     @GET
     @Produces(MediaType.APPLICATION_JSON)

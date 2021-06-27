@@ -9,6 +9,11 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.rest.dto.Student;
+import com.rest.dto.Trainer;
+import com.ts.dao.StudentDAO;
+import com.ts.dao.TrainerDAO;;
+
 @Path("TrainerResource")
 public class TrainerResource { /*
 	@Path("getTrainerByUserId/{userId}")
@@ -29,5 +34,18 @@ public class TrainerResource { /*
 			}
 	        return null;
 	    }*/
+	@Path("getTrainerByUserId/{userId}")
+    @GET    
+    @Produces(MediaType.APPLICATION_JSON)
+	 public Trainer getTrainerByUserId(@PathParam("userId") String userId) {
+		Trainer trainer = new Trainer();
+		TrainerDAO trainerDAO = new TrainerDAO();
+		trainer = trainerDAO.getTrainerByUserId(userId);
+    	if (trainer != null) {
+    		return trainer;
+    	} else {
+    		return null;
+    	}
+	 }
 
 }

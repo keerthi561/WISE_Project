@@ -1,0 +1,3 @@
+studentId ,studentName,studentUserId,studentPassword,studentDOB,studentDept,studentMobile,studentClg,studentSection,homeAddress,pincode,city,district,state,country,studentFb,studentLinkedIn,studentGit
+17wh1a0561,keerthi,17wh1a0561@bvrithyderabad.edu.in,password,28/10/99,CSE,9963605948,BVRITH,B,7-662-4A-I  shivaji nagar,523316,markapur,prakasam,Andhra Pradesh,India,NA,NA,NA
+17wh1a0588,RESHMA,17wh1a0588@bvrithyderabad.edu.in,password,01/02/99,CSE,9963605948,BVRITH,A,6-7-88,879056,warangal,warangal,telangana,NA,NA,NA,NA
